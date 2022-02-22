@@ -1,4 +1,5 @@
 // Demonstration of Constructor(Non parameterized).
+// @author Dhruv Prajapati
 
 //With out Constructor
 
@@ -37,23 +38,27 @@ int main()
 
 //with constructor
 
+//define Demo class
+
 class Demo
 {
 	int number;
 
 	public:
 
-		Demo()
+		Demo()		//default Constructor
 		{
 			cout << "Enter the number: ";
 			cin >> number;
 		}
 
-		void getData()
+		void getData()		//print number
 		{
 			cout << "Number: " << number << endl;
 		}
-};
+};		//end of Demo class
+
+//define Area class
 
 class Area
 {
@@ -61,26 +66,26 @@ class Area
 
 	public:
 
-		Area()
+		Area()		//default constructor
 		{
 			width=10;
 			length=20;
 		}
 
-		void calculate()
+		void calculate()		//print area of the object
 		{
 			cout << "Area = " << width*length << endl;
 		}
-};
+};	//and or Area class
 
 int main()
 {
-	Demo n1, n2;
+	Demo n1, n2;	//creating objects of the Demo class
 	n1.getData();
 	n2.getData();
 
-	Area a, b;
+	Area a, b;		//creating objects of the Area class
 	a.calculate();
 	b.calculate();
-}
+}//end of main function
 

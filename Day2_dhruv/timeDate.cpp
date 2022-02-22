@@ -1,4 +1,5 @@
 /*
+// @author Dhruv Prajapati
 
 In-class code: Write a cpp code that has two classes Time and Date
 
@@ -36,7 +37,7 @@ The date class:
 #include <ctime>
 using namespace std;
 
-//declaring Time class
+//define class Time
 
 class Time
 {
@@ -76,7 +77,7 @@ class Time
 			t.second = t2.second - t1.second;
 			return t;
 		}
-};
+};	//end of Time class
 
 //declaring Date class
 
@@ -87,12 +88,21 @@ class Date
 		int day, month, year;			//declaration of day, month, year variables
 
 		
-		Date setDate(int da, int m, int y)			//setDate() function set day, month and year variable
+		Date setDate()			//setDate() function set day, month and year variable
 		{
+			time_t currentTime;
+  			struct tm *localTime;
+
+  			time( &currentTime );
+  			localTime = localtime( &currentTime );
+
+			int day = localTime->tm_mday;
+			int month = localTime->tm_mon+1; 
+			int year = localTime->tm_year+1900;
 			Date d;
-			d.day = da;
-			d.month = m;
-			d.year = y;
+			d.day = day;
+			d.month = month;
+			d.year = year;
 			return d;
 		}
 
@@ -116,17 +126,17 @@ class Date
 
 		void findAge(Date d)			//findAge() function print age
 		{
-			d.setDate(day, month, year);
+			d.setDate();
 			Date d1;
-			d1.setDate(30, 11, 2000);
-			cout << "Age: " << d.year - d1.year << endl; 
+			d1.setDate();
+			cout << "Age: " << d.year - d1.year -1 << endl; 
 		}
-};
+};	//end of Date class
 
 int main()
 {
 	Time t1, t2, t3, t4, t5;			//Creating the objects of Time class
-	t1.setTime();						
+	t1.setTime();						//set time of t1 object				
 	t2 = t1.getTime();
 	cout << "Hours: " << t2.hour << " Minutes: " << t2.minute << " Seconds: " << t2.second << endl;
 
@@ -138,19 +148,11 @@ int main()
 
 	Date d1, d2, d3;				//Creating the objects of Date class
 
-	time_t currentTime;
-  	struct tm *localTime;
-
-  	time( &currentTime );
-  	localTime = localtime( &currentTime );
-
-	int day = localTime->tm_mday;
-	int month = localTime->tm_mon+1; 
-	int year = localTime->tm_year+1900;
+	
  
-	d2 = d1.setDate(day, month, year);
+	d2 = d1.setDate();
 	cout << "Day: " << d2.day << " Month: " << d2.month << " Year: " << d2.year << endl;
 	
 	d2.setDoB(30, 11, 2000);
 	d3.findAge(d2);
-}
+}	//end of main function

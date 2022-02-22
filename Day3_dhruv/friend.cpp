@@ -1,4 +1,5 @@
 // Demonstration on friend function
+// @author Dhruv Prajapati
 
 
 //In C++ a Friend Function that is a "friend" of a given class is allowed access to private and protected data in that class.
@@ -9,41 +10,45 @@
 //• It is not a member of the class so it cannot be called using the object.
 //• Usually, it has the objects as arguments.
 
+//Demo code of friend function
+
 #include <iostream>
 using namespace std;
 
+//define Numbers class
+
 class Numbers
 {
-	int n1, n2;
+	int n1, n2;		//Creating two private data members of the Numbers 
 
 	public:
 		
-		void setData(int a, int b);
-		void getData();
+		void setData(int a, int b);		//declaration of setData function
+		void getData();					//declaration of getData function
 	
 		//Here n1 and n2 is private so we can't access this variable outside the class, in other function.
-		//So in order to access this provate members we declare a friend function
+		//So in order to access this private members we declare a friend function
 
-		friend int add(Numbers n);
-};
+		friend int add(Numbers n);		//declaring friend function
+}; //end of Numbers class
 
-void Numbers :: setData(int a, int b)
+void Numbers :: setData(int a, int b)		//definition of setData function
 {
 	n1 = a;
 	n2 = b;
 }
 
-void Numbers :: getData()
+void Numbers :: getData()			//definition of getData function
 {
 	cout << n1 << " and " << n2 << endl;
 }
 
-int add(Numbers n)
+int add(Numbers n)			//add function returns the addition of two numbers
 {
 	return n.n1 + n.n2;
 }
 
-
+//define Box class
 
 class Box
 {
@@ -51,27 +56,31 @@ class Box
 
 	public:
 		
-		void setWidth(int a);
+		//declaring setWidth and getWidth
+
+		void setWidth(int a);		
 		void getWidth();
-		friend void printWidth(Box b);
+
+		friend void printWidth(Box b);		//declaring friend function
 
 };
 
-void Box :: setWidth(int a)
+void Box :: setWidth(int a)		//definiton of setWidth function
 {
 	width = a;
 }
 
-void Box :: getWidth()
+void Box :: getWidth()			//definition of getWidth function
 {
 	cout << "Width = " << width << endl;
 }
 
-void printWidth(Box b)
+void printWidth(Box b)		//print the width
 {
 	cout << "Width == " << b.width << endl;
 }
 
+//define Base class
 
 class Base
 {
@@ -94,7 +103,7 @@ float mean(Base ob){
 
 int main()
 {
-	Numbers n;
+	Numbers n;		//creating object of the Numbers class
 	n.setData(200, 300);
 	n.getData();
 	cout << "sum = " << add(n) << endl;

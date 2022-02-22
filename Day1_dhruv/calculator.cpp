@@ -1,4 +1,5 @@
 //Implementation of Calculator
+// @author Dhruv Prajapati
 
 #include <iostream>
 #include <cmath>
@@ -69,7 +70,7 @@ class Calculator
 				return 1;
 			else
 				return n * factorial(n - 1);
-		}
+		}  //end of factorial function
 
 		//fibo() function returns the fibonacci series of given length
 
@@ -84,8 +85,8 @@ class Calculator
 				b = c;
 				c = a + b;
 				cout << c << " ";
-			}
-		}
+			}  //end of for loop
+		}  //end of fibo function
 
 		//power() function returns the number1^number2 of given numbers
 
@@ -93,7 +94,8 @@ class Calculator
 		{
 			return pow(input1, input2);
 		}
-};
+		
+};  //end of Calculator class
 
 //defination of subtract function outside the class
 
@@ -192,4 +194,4 @@ int main()
 		}
 	}
 	return 0;
-}
+}  //end of main function

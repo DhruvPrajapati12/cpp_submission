@@ -1,4 +1,5 @@
 //Playing with public, private and protected access modifiers.
+// @author Dhruv Prajapati
 
 #include <iostream>
 using namespace std;
@@ -8,18 +9,18 @@ class Calculator
 	public: 
 		int n1,n2;
 
-		void setInput(int a, int b)
+		void setInput(int a, int b)		//set input of the variables
 		{
 			n1 = a;
 			n2 = b;
 		}
 	
-		int add()
+		int add()		//add function returns the addition of two numbers
 		{
 			return n1+n2;
 		}
 	
-		int subtract()
+		int subtract()	//subtract function returns the subtraction of two numbers
 		{
 			return add();
 		}
@@ -33,9 +34,9 @@ class Calculator
 
 int main()
 {
-	Calculator c;
-	c.setInput(50, 10);
-	cout << c.add() << endl;
-	cout << c.subtract() << endl;
-}
+	Calculator c;	//creating a object of the Calculator class
+	c.setInput(50, 10);		//set input to the c object
+	cout << c.add() << endl;	//calling add function
+	cout << c.subtract() << endl;	//calling subtract function
+}	//end of the main function
 

@@ -1,4 +1,5 @@
-//Demonstration of inline function 
+// Demonstration of inline function 
+// @author Dhruv Prajapati
 
 // Inline Functions
 
@@ -21,7 +22,7 @@
 #include <iostream>
 using namespace std;
 
-inline int cube(int x)
+inline int cube(int x)		//definiton of inline cube function, this returns the cube of given number
 {
 	return x*x*x;
 }

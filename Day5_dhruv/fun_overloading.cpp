@@ -1,7 +1,11 @@
 // Demonstration of function overloading
+// @author Dhruv Prajapati
 
 #include <iostream>
 using namespace std;
+
+//here we define sum function with different args and different return type
+//function with same name but different args are called function overloading.
 
 int sum(int i)
 {

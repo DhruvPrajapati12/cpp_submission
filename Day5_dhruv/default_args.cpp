@@ -1,9 +1,10 @@
 // Demonstration of default arguments
+// @author Dhruv Prajapati
 
 #include <iostream>
 using namespace std;
 
-int cube(int l, int b=20, int h=2)
+int cube(int l, int b=20, int h=2)		//cube function returns the cube of object
 {
 	return l*b*h;
 }
@@ -11,8 +12,8 @@ int cube(int l, int b=20, int h=2)
 // Write a C++ program to create function sum(), that performs addition of 3
 // integers also demonstrate Default Arguments concept.
 
-int sum(int x, int y=10, int z=20)
-{
+int sum(int x, int y=10, int z=20)		//sum function returns the sum of given number
+{										//here we assign default args from right to left
 	return (x+y+z);
 }
 
@@ -26,7 +27,7 @@ int main()
 	cout << "Sum is : " << sum(5) << endl;
 	cout << "Sum is : " << sum(5,15) << endl;
 	cout << "Sum is : " << sum(5,15,25) << endl;
-}
+}	// end of main function
 
 // -> while invoking a function If the argument/s are not passed then, the default values
 // are used.
