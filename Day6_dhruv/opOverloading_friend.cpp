@@ -1,82 +1,122 @@
-// Demo code of operator overloading using friend function of another class
+// Demo code of operator overloading using friend function.
+// @author Dhruv Prajapati
+
+//Here we define operator function outside the class and make friend
+//function to the class
 
 #include <iostream>
 using namespace std;
 
-//declaring class B
+//define Complex class
 
-class B;
-
-//define class A
-
-class A
+class Complex
 {
-    int a=20;
-    int b=30;
+    int real, img;        //creating real and img of interger type
 
     public:
 
-        A operator + (B obj2);      //declare '+' operator overloading function
-
-        A operator - (B obj2);      //declare '-' operator overloading function
-
-        void display()      //display data members
+        Complex()   //default constructor
         {
-            cout << "a: " << a << endl;
-            cout << "b: " << b << endl;
+            real=0;
+            img=0;
         }
-};
 
-//define class B
-
-class B
-{
-    int a1 = 25;
-    int b1 = 45;
-
-    public:
-
-        friend A A :: operator + (B obj2);      //friend function- '+' operator overloading function
-        friend A A :: operator - (B obj2);      //friend function- '-' operator overloading function
-
-        void display()      //display data members
+        Complex(int x, int y)   //parameterized constructor
         {
-            cout << "a: " << a1 << endl;
-            cout << "b: " << b1 << endl;
+            real=x;
+            img=y;
         }
-};
 
-//defining '+' operator overloading function
+        //display values
+        void display()
+        {
+            cout << "Real: " << real << endl;
+            cout << "Img part: " << img << endl << endl;
+        }
 
-A A :: operator + (B obj2)
+        friend Complex operator + (Complex ob1, Complex ob);
+
+        //overloading the '-' operator here.
+
+        Complex operator - (Complex ob)
+        {
+            Complex temp;
+            temp.real = real - ob.real;            
+            temp.img = img - ob.img;                
+            return temp;
+        }  //end of over loading function
+
+        friend Complex operator * (Complex ob1, Complex ob);
+
+        friend Complex operator / (Complex ob1, Complex ob);
+        
+//If the operator function is member function of the class, then we only pass  1 arguments
+//If the operator function is not member function of the class(friend function), then we can pass 2 arguments
+        
+
+}; //end of complex class
+
+//overloading the '+' operator here.
+
+Complex operator + (Complex ob1, Complex ob)
 {
-    A obj;
-    obj.a = a + obj2.a1;
-    obj.b = b + obj2.b1;
-    return obj;
-}
+    Complex temp;
+    temp.real = ob1.real + ob.real;
+    temp.img = ob1.img + ob.img;                
+    return temp;
+}  //end of over loading function
 
-//defining '-' operator overloading function
+//overloading the '*' operator here.
 
-A A :: operator - (B obj2)
+Complex operator * (Complex ob1, Complex ob)
 {
-    A obj;
-    obj.a = a - obj2.a1;
-    obj.b = b - obj2.b1;
-    return obj;
-}
+    Complex temp;
+    temp.real = ob1.real * ob.real;            
+    temp.img = ob1.img * ob.img;                
+    return temp;
+}  //end of over loading function
+
+//overloading the '/' operator here.
+
+Complex operator / (Complex ob1, Complex ob)
+{
+    Complex temp;
+    temp.real = ob1.real / ob.real;            
+    temp.img = ob1.img / ob.img;                
+    return temp;
+}  //end of over loading function
+
 
 int main()
 {
-    A a, a1;        //creating objects of class A
-    B b;            //creating object of class B
+    Complex c1(10,20), c2(5, 10);
+    Complex c3;
+    c1.display();
+    c2.display();
+    c3.display();
 
-    a.display();
-    b.display();
+    cout << "Action starts here " << endl;
 
-    a1 = a.operator+(b);
-    a1.display();
+    //add two objects
+    //c3 = c1 + c2; // + we can not add two objects, so we need to create + operator function.
+    c3 = operator+(c1, c2);
+    cout << "Addition of two object: " << endl;
+    c3.display();
 
-    a1 = a.operator-(b);
-    a1.display();
-}//end of main function
+    //substract two objects
+    c3 = c1 - c2; // + we can not add two objects, so we need to create - operator function.
+    cout << "Substraction of two object: " << endl;
+    c3.display();
+
+    //multiplication two objects
+    c3 = c1 * c2; // + we can not add two objects, so we need to create * operator function.
+    cout << "Multiplication of two object: " << endl;
+    c3.display();
+
+    //division two objects
+    c3 = c1 / c2; // + we can not add two objects, so we need to create / operator function.
+    cout << "Division of two object: " << endl;
+    c3.display();
+
+    return 0;
+}  //end of main function
