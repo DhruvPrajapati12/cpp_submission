@@ -125,7 +125,7 @@ class Complex
 
         //overloading the '++' operator here.
 
-        Complex operator ++()
+        Complex operator ++(int)
         {
             Complex temp;
             temp.real = real+1;            
@@ -270,7 +270,7 @@ int main()
     c3.display();
 
     //incrementing object
-    c3 = c1.operator++(); 
+    c3 = c1++; 
     cout << "10. Increment of object: " << endl;
     c3.display();
 
