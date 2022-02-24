@@ -26,13 +26,13 @@ class Demo
             b = 0;
         }
 
-        friend Demo operator ++ (Demo);
+        friend Demo operator ++ (Demo &);
 
-        friend Demo operator ++(Demo, int);
+        friend Demo operator ++(Demo &, int);
 
-        friend Demo operator -- (Demo);
+        friend Demo operator -- (Demo &);
 
-        friend Demo operator --(Demo, int);
+        friend Demo operator --(Demo &, int);
 
         
 
@@ -42,7 +42,7 @@ class Demo
         }
 };  //end of Demo class
 
-Demo operator ++(Demo obj)      //defining preincrement operator function
+Demo operator ++(Demo &obj)      //defining preincrement operator function
 {
     Demo d;
     d.a = ++obj.a;
@@ -52,7 +52,7 @@ Demo operator ++(Demo obj)      //defining preincrement operator function
     return d;
 }
 
-Demo operator ++(Demo obj, int)       //defining postincrement operator function
+Demo operator ++(Demo &obj, int)       //defining postincrement operator function
 {
     Demo d;
     d.a = obj.a++;
@@ -62,7 +62,7 @@ Demo operator ++(Demo obj, int)       //defining postincrement operator function
     return d;
 }
 
-Demo operator --(Demo obj)       //defining predecrement operator function
+Demo operator --(Demo &obj)       //defining predecrement operator function
 {
     Demo d;
     d.a = --obj.a;
@@ -72,7 +72,7 @@ Demo operator --(Demo obj)       //defining predecrement operator function
     return d;
 }
 
-Demo operator --(Demo obj, int)       //defining postdecrement operator function
+Demo operator --(Demo &obj, int)       //defining postdecrement operator function
 {
     Demo d;
     d.a = obj.a--;
