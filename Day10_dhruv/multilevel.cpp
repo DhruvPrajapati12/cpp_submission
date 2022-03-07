@@ -61,7 +61,7 @@ int main()
     cout  << "Weight:  " << i1.weight << endl;  // Invoking parent class attributes from child class
 
     p1.eat();       
-    p1.talk();      /
+    p1.talk();      
 
     s.talk();   //Invoking parent class method from child class
     s.eat();    //Invoking parent class method from child class
