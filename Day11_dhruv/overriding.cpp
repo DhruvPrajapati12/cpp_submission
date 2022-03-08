@@ -1,5 +1,9 @@
+// Demo code of function overriding.
+
 #include <iostream>
 using namespace std;
+
+// Define ABC class(Parent class)
 
 class ABC
 {
@@ -11,11 +15,13 @@ class ABC
         }
 };
 
+// Define XYZ class(Child class)
+
 class XYZ : public ABC 
 {
     public:
 
-        void display()
+        void display()  //overriding parent class method
         {
             cout << "This is child class" << endl;
         }
@@ -24,6 +30,11 @@ class XYZ : public ABC
 int main()
 {
     XYZ x;
-    x.display();
+    x.display();        //invoking child class function
     x.ABC::display();   //invoking parent class function
-}
+}   //end of main function
+
+// Always child class function priority more than parent class function
+// Function overriding does not depend upon the function parameters, return type, number of parameters
+
+// Function Overriding means same function name in child class and parent class 

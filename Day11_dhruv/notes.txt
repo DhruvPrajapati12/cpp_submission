@@ -1,0 +1,52 @@
+1 st way(Public)
+
+Base class:
+
+public: a,b,c 
+private: d,e,f
+protected: g,h,i
+
+Inheritance with public access modifier
+After -> are can be accessible by child class
+
+Child class:
+
+public:j,k,l -> a,b,c 
+private:m,n,o   -> nothing
+protected:p,q,r  -> g,h,i 
+
+2 nd way(private)
+
+Base class:
+
+public: a,b,c 
+private: d,e,f
+protected: g,h,i
+
+Inheritance with private access modifier
+After -> are can be accessible by child class
+
+Child class:
+
+public:j,k,l -> nothing 
+private:m,n,o   -> a,b,c,g,h,i
+protected:p,q,r  -> nothing
+
+3 rd way(protected)
+
+Base class:
+
+public: a,b,c 
+private: d,e,f
+protected: g,h,i
+
+Inheritance with protected access modifier
+After -> are can be accessible by child class
+
+Child class:
+
+public:j,k,l -> nothing 
+private:m,n,o   -> nothing
+protected:p,q,r  -> a,b,c,g,h,i
+
+public -> private, public -> protected(reverse is not possible)

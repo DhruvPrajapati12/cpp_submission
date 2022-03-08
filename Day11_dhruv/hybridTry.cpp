@@ -1,4 +1,4 @@
-// Demo code of hybrid Inheritance
+// Demo code of hybrid Inheritance(Virtual class)
 
 #include <iostream>
 using namespace std;
@@ -84,3 +84,17 @@ int main()
 
     hc.carr();
 }   //end of main function
+
+// Suppose there are 4 classes
+// A, B, C, D
+
+// Hybrid inheritance
+//         A 
+//     B       C 
+//         D
+
+// Suppose A class have void car() method, then this function can be accessible by B class and C class.
+// But not accessed by D class because of ambiguty(multiple path)
+
+// Virtual class helping us to solve this problem.
+// If we declare B and C as a virtual class of A then D can also access void car() function.
