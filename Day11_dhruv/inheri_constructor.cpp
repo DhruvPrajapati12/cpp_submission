@@ -16,6 +16,11 @@ class Base
             cout << "Base default constructor" << endl;
         }
 
+        Base(int x)
+        {
+            cout << "Parameterized constructor called" << endl;
+        }
+
         ~Base()     // Destructor
         {
             cout << "Base destructor" << endl;
@@ -35,7 +40,7 @@ class Derived : public Base
             cout << "Derived default constructor" << endl;
         }
 
-        Derived(int i)  //parameterized constructor
+        Derived(int i):Base(i)  //parameterized constructor         : Base(i) for calling base class parameterized constructor
         {
             cout << "Derived parameterized constructor" << endl;
         }
