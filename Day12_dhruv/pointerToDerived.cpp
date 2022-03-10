@@ -1,4 +1,4 @@
-// Demo code os pointer to derived class
+// Demo code of pointer to derived class
 
 // -> We can use pointers not only to the base objects but also to the objects of derived
 // classes.
@@ -41,8 +41,15 @@ int main()
     ptr1->show();
     ((dervied *)ptr1) -> dervided();    //Base pointer explicitly casted into derived type
 
-    // ptr2 = &b;
+    // we can access those members of derived class which are inherited from base class by base class pointer
+    // but we can not access original member of dervied class which are not inherited  from base class usig base class object
+    // we cam access original member of dervied class using pointer of derived class 
+    
+    // ptr2 = &b;   //ERROR
     // ptr2 -> show();
+
+    ptr2 = (dervied*)&b;    // Here we access base class data members and member functions using dervied class pointer
+    ptr2 -> show();
 }
 
 // For example:

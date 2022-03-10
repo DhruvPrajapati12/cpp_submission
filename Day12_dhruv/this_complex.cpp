@@ -21,7 +21,7 @@ class Person
 
         Person olderperson(Person p)
         {
-            if(age > p.age)
+            if(this -> age > p.age)
                 return *this;  //this pointer is used to return reference to the calling object
             else 
                 return p;

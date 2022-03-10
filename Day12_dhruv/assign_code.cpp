@@ -36,29 +36,29 @@ class student
    }
 };
 
-class monitor : public student
+class child : public student
 {
-   public:
-   float per = 80;
-   void print()
-   {
-      cout << "Percentage: " << per << endl; 
-   }
+   
 };
 
 int main()
 {
+
+   // Here we access base class data members and member functions using dervied class pointer
+
+   child *ptr;
    student s[3];
-   student *ptr = s;
+   ptr = (child*)s;
+
    for(int i=0;i<3;i++)
    {
       ptr->getdata();
-       ptr++;
+      ptr++;
    }
-  
+
    cout << "\nEmployee information\n" << endl;
 
-   ptr=s; //set pointer to starting point of array
+   ptr=(child*)s; //set pointer to starting point of array
 
    for(int i=0;i<3;i++)
    {
@@ -66,4 +66,23 @@ int main()
       ptr++;
    }
    return 0;
+
+   // student s[3];
+   // student *ptr = s;
+   // for(int i=0;i<3;i++)
+   // {
+   //    ptr->getdata();
+   //     ptr++;
+   // }
+  
+   // cout << "\nEmployee information\n" << endl;
+
+   // ptr=s; //set pointer to starting point of array
+
+   // for(int i=0;i<3;i++)
+   // {
+   //    ptr->printdata();
+   //    ptr++;
+   // }
+   // return 0;
 }
