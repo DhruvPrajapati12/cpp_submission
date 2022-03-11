@@ -1,2 +1,1 @@
 1. virtual_fun_new.cpp
-2. pure_virtual_fun.cpp

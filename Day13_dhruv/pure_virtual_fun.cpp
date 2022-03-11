@@ -9,7 +9,6 @@
 
 // virtual void function() = 0;
 
-// DOUBT
 
 #include <iostream>
 using namespace std;
@@ -59,24 +58,24 @@ class circle : public shape
 
 int main()
 {
-    square s;
-    circle c;
-    // shape b;
-    s.getData();
-    cout << "Area of square: " << s.claculateArea() << endl;
-
-    c.getData();
-    cout << "Area of circle: " << c.claculateArea() << endl;
-
     // square s;
     // circle c;
-    // shape *ptr;
+    // // shape b;
+    // s.getData();
+    // cout << "Area of square: " << s.claculateArea() << endl;
 
-    // ptr->getData();
+    // c.getData();
+    // cout << "Area of circle: " << c.claculateArea() << endl;
 
-    // ptr = &s;
-    // cout << "Area of square: " << ptr->claculateArea() << endl;
+    square s;
+    circle c;
+    shape *ptr;
 
-    // ptr = &c;
-    // cout << "Area of circle: " << ptr->claculateArea() << endl;
+    ptr = &s;
+    ptr->getData();
+    cout << "Area of square: " << ptr->claculateArea() << endl;
+
+    ptr = &c;
+    ptr -> getData();
+    cout << "Area of circle: " << ptr->claculateArea() << endl;
 }
