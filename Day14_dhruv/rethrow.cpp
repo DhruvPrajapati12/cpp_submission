@@ -15,14 +15,14 @@ int main()
         try 
         {
             if(a == 2)
-                throw a;
+                throw a;    // throwing integer exception
         }
         catch(int x)
         {
             cout << "Exception in inner try-catch block" << endl;
             a++;
             if(a == 3)
-                throw a;
+                throw a;    // rethrowing integer exception
         }
         catch(...)
         {
