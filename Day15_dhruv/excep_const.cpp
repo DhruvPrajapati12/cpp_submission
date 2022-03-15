@@ -27,6 +27,7 @@ class Devide        // Doubt
                 delete x;
                 delete y;
                 cout << "second number can not be zero" << endl;
+                throw u;
             }
         }
 
