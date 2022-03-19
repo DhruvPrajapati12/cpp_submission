@@ -21,10 +21,11 @@ public:
         student s;
         cout << "Enter the id: ";
         cin >> s.id;
+        cin.ignore();
         cout << "Enter the name: ";
-        cin >> s.name;
+        cin.getline(s.name, 20);
         cout << "Enter the branch: ";
-        cin >> s.branch;
+        cin.getline(s.branch, 20);
         cout << "Enter the location: ";
         cin >> s.location;
 
@@ -72,9 +73,8 @@ public:
         file.open("student.dat", ios::in | ios::binary);
 
         cout << "All student data is: " << endl;
-        while(!file.eof())
+        while(file.read((char *)&s, sizeof(s)))
         {
-            file.read((char *)&s, sizeof(s));
             cout << "Id: " << s.id << " name: " << s.name << " branch: " << s.branch << " location: " << s.location << endl;
         }
         
