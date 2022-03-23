@@ -18,6 +18,10 @@
         "istream": "cpp",
         "streambuf": "cpp",
         "tuple": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "list": "cpp",
+        "initializer_list": "cpp",
+        "system_error": "cpp",
+        "typeinfo": "cpp"
     }
 }
