@@ -54,3 +54,12 @@ int main()
     cout << endl;
     return 0;
 }
+
+// Operations on vector
+// -> Iterator begin();
+// -> Iterator end();
+// -> Bool empty();
+// -> Void push_back(const T& x);
+// -> Iterator erase (iterator it);
+// -> Iterator erase(iterator first,iterator last);
+// -> Void clear();

@@ -30,7 +30,7 @@ class DailyTemp
         }
 };
 
-// bool operator<(DailyTemp a, DailyTemp b)
+// bool operator<(DailyTemp a, DailyTemp b)     // DOUBT
 // {
 //     return a.get_temp() < b.get_temp();
 // }
