@@ -1,0 +1,21 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Name	map_object.cpp	/^        Name()$/;"	f	class:Name
+Name	map_object.cpp	/^        Name(char *s)$/;"	f	class:Name
+Name	map_object.cpp	/^class Name$/;"	c	file:
+PhoneNum	map_object.cpp	/^        PhoneNum()$/;"	f	class:PhoneNum
+PhoneNum	map_object.cpp	/^        PhoneNum(char *s)$/;"	f	class:PhoneNum
+PhoneNum	map_object.cpp	/^class PhoneNum$/;"	c	file:
+get	map_object.cpp	/^        char *get()$/;"	f	class:PhoneNum
+get	map_object.cpp	/^        char* get()$/;"	f	class:Name
+main	List.cpp	/^int main()$/;"	f
+main	map.cpp	/^int main()$/;"	f
+main	map_object.cpp	/^int main()$/;"	f
+main	sorting.cpp	/^int main()$/;"	f
+operator <	map_object.cpp	/^bool operator<(Name a, Name b)      \/\/ DOUBT$/;"	f
+str	map_object.cpp	/^    char str[40];$/;"	m	class:Name	file:
+str	map_object.cpp	/^    char str[80];$/;"	m	class:PhoneNum	file:

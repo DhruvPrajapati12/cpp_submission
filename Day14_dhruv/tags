@@ -1,0 +1,23 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+A	quiz.cpp	/^class A$/;"	c	file:
+B	quiz.cpp	/^class B$/;"	c	file:
+C	quiz.cpp	/^class C : public A$/;"	c	file:
+D	quiz.cpp	/^class D : public B$/;"	c	file:
+E	quiz.cpp	/^class E : public C, public D$/;"	c	file:
+F	quiz.cpp	/^class F : public E$/;"	c	file:
+displayA	quiz.cpp	/^        void displayA()$/;"	f	class:A
+displayB	quiz.cpp	/^        void displayB()$/;"	f	class:B
+displayC	quiz.cpp	/^        void displayC()$/;"	f	class:C
+displayD	quiz.cpp	/^        void displayD()$/;"	f	class:D
+displayE	quiz.cpp	/^        void displayE()$/;"	f	class:E
+displayF	quiz.cpp	/^        void displayF()$/;"	f	class:F
+main	exception.cpp	/^int main()$/;"	f
+main	exception1.cpp	/^int main()$/;"	f
+main	exception2.cpp	/^int main()$/;"	f
+main	quiz.cpp	/^int main()$/;"	f
+main	rethrow.cpp	/^int main()$/;"	f
