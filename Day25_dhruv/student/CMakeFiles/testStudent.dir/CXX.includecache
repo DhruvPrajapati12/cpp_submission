@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dhruv/Desktop/cppPrograms/Github/Day25_dhruv/student/include/Student.h
+string
+-
+
+/home/dhruv/Desktop/cppPrograms/Github/Day25_dhruv/student/src/Student.cpp
+iostream
+-
+../include/Student.h
+/home/dhruv/Desktop/cppPrograms/Github/Day25_dhruv/student/include/Student.h
+
+/home/dhruv/Desktop/cppPrograms/Github/Day25_dhruv/student/src/mainapp.cpp
+../include/Student.h
+/home/dhruv/Desktop/cppPrograms/Github/Day25_dhruv/student/include/Student.h
+

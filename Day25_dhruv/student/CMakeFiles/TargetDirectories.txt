@@ -1,0 +1,3 @@
+/home/dhruv/Desktop/cppPrograms/Github/Day25_dhruv/student/CMakeFiles/rebuild_cache.dir
+/home/dhruv/Desktop/cppPrograms/Github/Day25_dhruv/student/CMakeFiles/testStudent.dir
+/home/dhruv/Desktop/cppPrograms/Github/Day25_dhruv/student/CMakeFiles/edit_cache.dir
